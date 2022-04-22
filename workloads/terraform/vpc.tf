@@ -24,9 +24,8 @@ module "vpc" {
 
 module "vpc_eu_west_1" {
   source = "terraform-aws-modules/vpc/aws"
-  providers = {
-    aws = aws.eu_west_1
-  }
+  provider = aws.eu_west_1
+ 
   name = "vpc-ff-workload1-eu-west-1"
   cidr = "10.1.0.0/16"
 
