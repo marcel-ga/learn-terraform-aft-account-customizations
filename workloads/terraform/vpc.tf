@@ -6,7 +6,7 @@ provider "aws" {
 module "vpc" {
   source = "terraform-aws-modules/vpc/aws"
 
-  name = "vpc-ff-workload1-1"
+  name = "vpc-ff-workload1-eu-central-1"
   cidr = "10.0.0.0/16"
 
   azs             = ["eu-central-1a", "eu-central-1b", "eu-central-1c"]
@@ -27,7 +27,7 @@ module "vpc_eu_west_1" {
   providers = {
     aws = aws.eu_west_1
   }
-  name = "vpc-ff-workload1-1"
+  name = "vpc-ff-workload1-eu-west-1"
   cidr = "10.1.0.0/16"
 
   azs             = ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
